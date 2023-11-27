@@ -25,42 +25,78 @@ recomendaciones= pd.read_parquet('recomendaciones.parquet')
 @app.get(path="/", response_class=HTMLResponse, tags=["Homepage"])
 def hola():
     return ''' 
-    <html lang="en">
-    <head>
+     
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto  Individual Steam API</title>
+    <title>Proyecto Individual Steam API</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             padding: 20px;
+            margin: 0;
         }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         h1 {
             color: #0366d6; /* Azul de Steam */
-            text-align: center;
         }
+
         p {
             color: #333;
             font-size: 18px;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0366d6;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .steam-logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%; /* Ajusta la imagen al 80% del ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
         }
     </style>
 </head>
+
 <body>
-    <h1>Proyecto Steam API</h1>
-    <p>Bienvenido a la API del proyecto relacionado con Steam. Aquí puedes acceder a información emocionante sobre juegos, usuarios y más. 
-
-    <p>¡Explora la API para descubrir más funcionalidades emocionantes! Se puede ver el funcionamiento de esta si se coloca /docs en la barra de busqueda</p>
-
-    </p>
+    <header>
+        <h1>Proyecto Steam API</h1>
+        <img class="steam-logo" src="https://www.trecebits.com/wp-content/uploads/2021/09/Steam.jpg.webp?width=1200&aspect_ratio=16:9" alt="Steam Logo">
+        <p>Bienvenido a la API del proyecto relacionado con Steam. Aquí puedes acceder a información emocionante sobre juegos, usuarios y más.</p>
+        <p>¡Explora la API para descubrir más funcionalidades emocionantes! Puedes ver el funcionamiento de esta si colocas /docs en la barra de búsqueda.</p>
+    </header>
 
     <footer>
         <p>© 2023 Proyecto Steam API. Aylin Lizett Rengifo Gutierrez</p>
     </footer>
 </body>
+
 </html>
+
+
+
+
 
     ''' 
 
@@ -76,7 +112,7 @@ def hola():
 @app.get(path='/PlayTimeGenre',           
          description = """ <font color="darkblue">
                          DESCRIPCION <br>
-                         Al ingresar un genero devuelve el año con mas horas jugadas para este
+                         Al ingresar un genero devuelve el año con mas horas jugadas para este</p>
                         INSTRUCCIONES<br>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese el genero en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
@@ -109,7 +145,7 @@ def PlayTimeGenre(genero: str):
 @app.get('/UserForGenre', 
          description = """ <font color="darkblue">
                          DESCRIPCION <br>
-                         Al ingresar un genero devuelve el usuario que acumula mas horas jugadas para el genero dado y un alista de la acumulacion de horas jugadas por año.
+                         Al ingresar un genero devuelve el usuario que acumula mas horas jugadas para el genero dado y un alista de la acumulacion de horas jugadas por año. </p>
                         INSTRUCCIONES<br>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese el genero en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
@@ -149,7 +185,7 @@ def UserForGenre(genre):
 @app.get('/UsersRecommend', 
          description = """ <font color="darkblue">
                         DESCRIPCION <br>
-                         Al ingresar un año devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado.
+                         Al ingresar un año devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. </p>
                         INSTRUCCIONES<br>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese el año en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
@@ -177,7 +213,7 @@ def UsersRecommend(year: int) :
 @app.get('/UsersWorstDeveloper/', 
          description = """ <font color="darkblue">
                         DESCRIPCION <br>
-                         Al ingresar un año devuelve el top 3 de desarrolladoras con juegos MENOS recomendados por usuarios para el año dado.
+                         Al ingresar un año devuelve el top 3 de desarrolladoras con juegos MENOS recomendados por usuarios para el año dado. </p>
                         INSTRUCCIONES<br>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese el año en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
@@ -206,7 +242,8 @@ def UsersWorstDeveloper(year: int):
 @app.get('/sentiment_analysis/', 
          description = """ <font color="darkblue">
                         DESCRIPCION <br>
-                         Al ingresar una desarrolladora devuelve un diccionario con el nombre de la desarrolladora como llave y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor.
+                         Al ingresar una desarrolladora devuelve un diccionario con el nombre de la desarrolladora como llave y una lista 
+                         con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor. </p>
                         INSTRUCCIONES<br>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese la desarrolladora  en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
@@ -242,7 +279,7 @@ def sentiment_analysis(empresa_desarrolladora: str) -> dict:
 @app.get("/recomendacion_juego/{id_producto}", 
          description = """ <font color="darkblue">
                         DESCRIPCION <br>
-                         Devuelve 5 recomendaciones de juegos similares a uno del que ponemos su id.
+                         Devuelve 5 recomendaciones de juegos similares a uno del que ponemos su id. </p>
                         1. Haga clik en "Try it out".<br>
                         2. Ingrese el id del juego en la caja de texto inferior. Ejemplo de generos: Action,Adventure, Casual, Indie, Simulation,entre otros<br>
                         3. Bajar a "Resposes"  para el analisis de sentimientos.
