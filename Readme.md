@@ -12,19 +12,17 @@
 # Índice 
 <details>
   <summary>Tabla de contenido</summary>
-  <ol>  
-    <li><a href="#INTRODUCCION">INTRODUCCION</a></li>
+  <ol>
+    <li><a href="#INTRODUCCION">INTRODUCCIÓN</a></li>
     <li><a href="#DATOS">DATOS</a></li>
-    <li><a href="#TAREAS DESARROLLADAS">TAREAS DESARROLLADAS</a></li>
-    <li><a href="##TRANSFORMACIONES">TRANSFORMACIONES</a></li>
-    <li><a href="## FEATURE ENGINEERING">FEATURE ENGINEERING</a></li>
-    <li><a href="##ANALISIS EXPLORATORIO DE LOS DATOS EDA">EDA</a></li>
-    <li><a href="##MODELO ">MODELO ML</a></li>
-    <li><a href="## DESARROLLO API ">DESARROLLO API</a></li>
+    <li><a href="#TAREAS-DESARROLLADAS">TAREAS DESARROLLADAS</a></li>
+    <li><a href="#TRANSFORMACIONES">TRANSFORMACIONES</a></li>
+    <li><a href="#FEATURE-ENGINEERING">FEATURE ENGINEERING</a></li>
+    <li><a href="#EDA">ANÁLISIS EXPLORATORIO DE LOS DATOS (EDA)</a></li>
+    <li><a href="#MODELO-ML">MODELO ML</a></li>
+    <li><a href="#DESARROLLO-API">DESARROLLO API</a></li>
     <li><a href="#CONCLUSIONES">CONCLUSIONES</a></li>
-    <li><a href="# TECNOLOGIAS USADAS">TECNOLOGIAS</a></li>
-    
-    
+    <li><a href="#TECNOLOGIAS-USADAS">TECNOLOGÍAS USADAS</a></li>
   </ol>
 </details>
 
