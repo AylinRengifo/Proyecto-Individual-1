@@ -103,7 +103,7 @@ Para el desarrollo de la API, se optó por utilizar el framework FastAPI, implem
 <p style="text-align: justify;"> Es esencial destacar que todas estas funciones fueron implementadas y desplegadas en un entorno virtual de FastAPI, optimizando su rendimiento en la plataforma Render mediante la generación de dataframes más pequeños sin comprometer la calidad de la información ofrecida.
 
 
-El desarrollo de las funciones de consultas generales se puede ver en [Funciones](https://github.com/AylinRengifo/Proyecto-Individual-1/blob/main/Jupyters/5.%20Funciones.ipynb). El desarrollo del código para las funciones del modelo de recomendación se puede ver en [Modelo](https://github.com/AylinRengifo/Proyecto-Individual-1/blob/main/Jupyters/6.%20Modelo.ipynb). Pueden encontrar el Deploy en Render/FastAPI en  [API] (https://proyecto-individual-08oa.onrender.com)
+El desarrollo de las funciones de consultas generales se puede ver en [Funciones](https://github.com/AylinRengifo/Proyecto-Individual-1/blob/main/Jupyters/5.%20Funciones.ipynb). El desarrollo del código para las funciones del modelo de recomendación se puede ver en [Modelo](https://github.com/AylinRengifo/Proyecto-Individual-1/blob/main/Jupyters/6.%20Modelo.ipynb). Pueden encontrar el Deploy en Render/FastAPI en  [API](https://proyecto-individual-08oa.onrender.com)
 
 
 <hr></p>
